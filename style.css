@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo {
+    font-size: 24px;
+    background: linear-gradient(90deg, #cd0045, rgb(226, 105, 5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #b9b7b7;
+    font-weight: bold;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #f4afea;
+    color: #cd0045;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    flex: 1;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #626262;
+    font-size: 36px;
+}
+
+p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.hire-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #8b47b3;
+    color: #fff;
+    border-radius: 7px;
+    width: 200px; 
+    text-decoration: none;
+    margin-top: 20px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Tablet View - Navbar Links Visible, Adjust Text and Image Sizes */
+@media (max-width: 992px) {
+    .hero {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .image img {
+        max-width: 90%;
+    }
+
+    /* Navbar adjustments for tablet view */
+    .logo {
+        font-size: 20px; /* Adjust logo size */
+    }
+
+    nav ul {
+        display: flex; /* Ensure links are visible */
+    }
+}
+
+/* Mobile View - Stack Content Vertically and Hide Navbar Links */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .content, .image {
+        width: 100%;
+    }
+
+    .image {
+        margin-top: 20px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .image img {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    /* Navbar adjustments for mobile view */
+    .navbar {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: none; /* Hide the nav links */
+    }
+
+    .logo {
+        font-size: 20px; /* Adjust logo size */
+    }
+}
