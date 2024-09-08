@@ -65,6 +65,7 @@ nav ul li a {
     margin: 50px auto;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .content {
@@ -105,12 +106,18 @@ p {
     align-items: center;
     box-sizing: border-box;
     padding-left: 20px;
+    position: relative;
 }
 
 .image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+/* Move the image up by default on larger screens */
+.image {
+    top: -50px; /* Adjust as necessary */
 }
 
 /* Tablet View - Navbar Links Visible, Adjust Text and Image Sizes */
@@ -131,6 +138,11 @@ p {
         max-width: 90%;
     }
 
+    /* Move the image up slightly on tablet view */
+    .image {
+        top: -40px;
+    }
+
     /* Navbar adjustments for tablet view */
     .logo {
         font-size: 20px; /* Adjust logo size */
@@ -141,10 +153,10 @@ p {
     }
 }
 
-/* Mobile View - Stack Content Vertically and Hide Navbar Links */
+/* Mobile View - Stack Content Vertically and Move Image Above the Paragraph */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column-reverse; /* Stack content and move image above */
         text-align: center;
     }
 
@@ -153,9 +165,10 @@ p {
     }
 
     .image {
-        margin-top: 20px;
+        margin-bottom: 20px; /* Add margin below the image */
         text-align: center;
         padding-left: 0;
+        top: 0; /* Ensure image moves up above the paragraph */
     }
 
     .image img {
